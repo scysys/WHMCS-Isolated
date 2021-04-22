@@ -1,0 +1,2347 @@
+.whmcs-twentyone-isolated {
+  @charset "UTF-8";
+  /**
+ * Variables declared here can be overridden by consuming applications, with
+ * the help of the `!default` flag.
+ *
+ * @example
+ *     // overriding $hoverColor
+ *     $hoverColor: rgba(red, 0.05);
+ *
+ *     // overriding image path
+ *     $flagsImagePath: "images/";
+ *
+ *     // import the scss file after the overrides
+ *     @import "bower_component/intl-tel-input/src/css/intlTelInput";
+ */
+  /**
+ * WHMCS Telephone Country Code Dropdown
+ *
+ * Using https://github.com/jackocnr/intl-tel-input
+ *
+ * @copyright Copyright (c) WHMCS Limited 2005-2017
+ * @license http://www.whmcs.com/license/ WHMCS Eula
+ */
+  /**
+  * bootstrap-switch - Turn checkboxes and radio buttons into toggle switches.
+  *
+  * @version v4.0.0-alpha.1
+  * @homepage http://www.bootstrap-switch.org
+  * @author Mattia Larentis <mattia@larentis.eu> (http://larentis.eu)
+  * @license Apache-2.0
+  */
+  /* iCheck plugin Square skin, blue
+----------------------------------- */
+  /* HiDPI support */
+}
+.whmcs-twentyone-isolated .intl-tel-input {
+  position: relative;
+  display: inline-block;
+}
+.whmcs-twentyone-isolated .intl-tel-input * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.whmcs-twentyone-isolated .intl-tel-input .hide {
+  display: none;
+}
+.whmcs-twentyone-isolated .intl-tel-input .v-hide {
+  visibility: hidden;
+}
+.whmcs-twentyone-isolated .intl-tel-input input,
+.whmcs-twentyone-isolated .intl-tel-input input[type=text],
+.whmcs-twentyone-isolated .intl-tel-input input[type=tel] {
+  position: relative;
+  z-index: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-right: 36px;
+  margin-right: 0;
+}
+.whmcs-twentyone-isolated .intl-tel-input .flag-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 1px;
+}
+.whmcs-twentyone-isolated .intl-tel-input .selected-flag {
+  z-index: 1;
+  position: relative;
+  width: 36px;
+  height: 100%;
+  padding: 0 0 0 8px;
+}
+.whmcs-twentyone-isolated .intl-tel-input .selected-flag .iti-flag {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.whmcs-twentyone-isolated .intl-tel-input .selected-flag .iti-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+  right: 6px;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 4px solid #555;
+}
+.whmcs-twentyone-isolated .intl-tel-input .selected-flag .iti-arrow.up {
+  border-top: none;
+  border-bottom: 4px solid #555;
+}
+.whmcs-twentyone-isolated .intl-tel-input .country-list {
+  position: absolute;
+  z-index: 2;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 0 -1px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border: 1px solid #CCC;
+  white-space: nowrap;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+.whmcs-twentyone-isolated .intl-tel-input .country-list.dropup {
+  bottom: 100%;
+  margin-bottom: -1px;
+}
+.whmcs-twentyone-isolated .intl-tel-input .country-list .flag-box {
+  display: inline-block;
+  width: 20px;
+}
+@media (max-width: 500px) {
+  .whmcs-twentyone-isolated .intl-tel-input .country-list {
+    white-space: normal;
+  }
+}
+.whmcs-twentyone-isolated .intl-tel-input .country-list .divider {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #CCC;
+}
+.whmcs-twentyone-isolated .intl-tel-input .country-list .country {
+  padding: 5px 10px;
+}
+.whmcs-twentyone-isolated .intl-tel-input .country-list .country .dial-code {
+  color: #999;
+}
+.whmcs-twentyone-isolated .intl-tel-input .country-list .country.highlight {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.whmcs-twentyone-isolated .intl-tel-input .country-list .flag-box,
+.whmcs-twentyone-isolated .intl-tel-input .country-list .country-name,
+.whmcs-twentyone-isolated .intl-tel-input .country-list .dial-code {
+  vertical-align: middle;
+}
+.whmcs-twentyone-isolated .intl-tel-input .country-list .flag-box,
+.whmcs-twentyone-isolated .intl-tel-input .country-list .country-name {
+  margin-right: 6px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.allow-dropdown input,
+.whmcs-twentyone-isolated .intl-tel-input.allow-dropdown input[type=text],
+.whmcs-twentyone-isolated .intl-tel-input.allow-dropdown input[type=tel],
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code input,
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code input[type=text],
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code input[type=tel] {
+  padding-right: 6px;
+  padding-left: 52px;
+  margin-left: 0;
+}
+.whmcs-twentyone-isolated .intl-tel-input.allow-dropdown .flag-container,
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code .flag-container {
+  right: auto;
+  left: 0;
+}
+.whmcs-twentyone-isolated .intl-tel-input.allow-dropdown .selected-flag,
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code .selected-flag {
+  width: 46px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.allow-dropdown .flag-container:hover {
+  cursor: pointer;
+}
+.whmcs-twentyone-isolated .intl-tel-input.allow-dropdown .flag-container:hover .selected-flag {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.whmcs-twentyone-isolated .intl-tel-input.allow-dropdown input[disabled] + .flag-container:hover,
+.whmcs-twentyone-isolated .intl-tel-input.allow-dropdown input[readonly] + .flag-container:hover {
+  cursor: default;
+}
+.whmcs-twentyone-isolated .intl-tel-input.allow-dropdown input[disabled] + .flag-container:hover .selected-flag,
+.whmcs-twentyone-isolated .intl-tel-input.allow-dropdown input[readonly] + .flag-container:hover .selected-flag {
+  background-color: transparent;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code .selected-flag {
+  background-color: rgba(0, 0, 0, 0.05);
+  display: table;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code .selected-dial-code {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 28px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.iti-sdc-2 input,
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.iti-sdc-2 input[type=text],
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.iti-sdc-2 input[type=tel] {
+  padding-left: 66px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.iti-sdc-2 .selected-flag {
+  width: 60px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 input,
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 input[type=text],
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 input[type=tel] {
+  padding-left: 76px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 .selected-flag {
+  width: 70px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.iti-sdc-3 input,
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.iti-sdc-3 input[type=text],
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.iti-sdc-3 input[type=tel] {
+  padding-left: 74px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.iti-sdc-3 .selected-flag {
+  width: 68px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-3 input,
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-3 input[type=text],
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-3 input[type=tel] {
+  padding-left: 84px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-3 .selected-flag {
+  width: 78px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.iti-sdc-4 input,
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.iti-sdc-4 input[type=text],
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.iti-sdc-4 input[type=tel] {
+  padding-left: 82px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.iti-sdc-4 .selected-flag {
+  width: 76px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-4 input,
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-4 input[type=text],
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-4 input[type=tel] {
+  padding-left: 92px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-4 .selected-flag {
+  width: 86px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.iti-sdc-5 input,
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.iti-sdc-5 input[type=text],
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.iti-sdc-5 input[type=tel] {
+  padding-left: 90px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.iti-sdc-5 .selected-flag {
+  width: 84px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-5 input,
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-5 input[type=text],
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-5 input[type=tel] {
+  padding-left: 100px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-5 .selected-flag {
+  width: 94px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.iti-container {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  z-index: 1060;
+  padding: 1px;
+}
+.whmcs-twentyone-isolated .intl-tel-input.iti-container:hover {
+  cursor: pointer;
+}
+.whmcs-twentyone-isolated .iti-mobile .intl-tel-input.iti-container {
+  top: 30px;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  position: fixed;
+}
+.whmcs-twentyone-isolated .iti-mobile .intl-tel-input .country-list {
+  max-height: 100%;
+  width: 100%;
+}
+.whmcs-twentyone-isolated .iti-mobile .intl-tel-input .country-list .country {
+  padding: 10px 10px;
+  line-height: 1.5em;
+}
+.whmcs-twentyone-isolated .iti-flag {
+  width: 20px;
+}
+.whmcs-twentyone-isolated .iti-flag.be {
+  width: 18px;
+}
+.whmcs-twentyone-isolated .iti-flag.ch {
+  width: 15px;
+}
+.whmcs-twentyone-isolated .iti-flag.mc {
+  width: 19px;
+}
+.whmcs-twentyone-isolated .iti-flag.ne {
+  width: 18px;
+}
+.whmcs-twentyone-isolated .iti-flag.np {
+  width: 13px;
+}
+.whmcs-twentyone-isolated .iti-flag.va {
+  width: 15px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .whmcs-twentyone-isolated .iti-flag {
+    background-size: 5630px 15px;
+  }
+}
+.whmcs-twentyone-isolated .iti-flag.ac {
+  height: 10px;
+  background-position: 0px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ad {
+  height: 14px;
+  background-position: -22px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ae {
+  height: 10px;
+  background-position: -44px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.af {
+  height: 14px;
+  background-position: -66px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ag {
+  height: 14px;
+  background-position: -88px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ai {
+  height: 10px;
+  background-position: -110px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.al {
+  height: 15px;
+  background-position: -132px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.am {
+  height: 10px;
+  background-position: -154px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ao {
+  height: 14px;
+  background-position: -176px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.aq {
+  height: 14px;
+  background-position: -198px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ar {
+  height: 13px;
+  background-position: -220px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.as {
+  height: 10px;
+  background-position: -242px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.at {
+  height: 14px;
+  background-position: -264px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.au {
+  height: 10px;
+  background-position: -286px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.aw {
+  height: 14px;
+  background-position: -308px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ax {
+  height: 13px;
+  background-position: -330px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.az {
+  height: 10px;
+  background-position: -352px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ba {
+  height: 10px;
+  background-position: -374px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bb {
+  height: 14px;
+  background-position: -396px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bd {
+  height: 12px;
+  background-position: -418px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.be {
+  height: 15px;
+  background-position: -440px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bf {
+  height: 14px;
+  background-position: -460px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bg {
+  height: 12px;
+  background-position: -482px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bh {
+  height: 12px;
+  background-position: -504px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bi {
+  height: 12px;
+  background-position: -526px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bj {
+  height: 14px;
+  background-position: -548px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bl {
+  height: 14px;
+  background-position: -570px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bm {
+  height: 10px;
+  background-position: -592px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bn {
+  height: 10px;
+  background-position: -614px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bo {
+  height: 14px;
+  background-position: -636px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bq {
+  height: 14px;
+  background-position: -658px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.br {
+  height: 14px;
+  background-position: -680px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bs {
+  height: 10px;
+  background-position: -702px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bt {
+  height: 14px;
+  background-position: -724px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bv {
+  height: 15px;
+  background-position: -746px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bw {
+  height: 14px;
+  background-position: -768px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.by {
+  height: 10px;
+  background-position: -790px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.bz {
+  height: 14px;
+  background-position: -812px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ca {
+  height: 10px;
+  background-position: -834px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.cc {
+  height: 10px;
+  background-position: -856px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.cd {
+  height: 15px;
+  background-position: -878px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.cf {
+  height: 14px;
+  background-position: -900px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.cg {
+  height: 14px;
+  background-position: -922px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ch {
+  height: 15px;
+  background-position: -944px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ci {
+  height: 14px;
+  background-position: -961px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ck {
+  height: 10px;
+  background-position: -983px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.cl {
+  height: 14px;
+  background-position: -1005px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.cm {
+  height: 14px;
+  background-position: -1027px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.cn {
+  height: 14px;
+  background-position: -1049px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.co {
+  height: 14px;
+  background-position: -1071px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.cp {
+  height: 14px;
+  background-position: -1093px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.cr {
+  height: 12px;
+  background-position: -1115px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.cu {
+  height: 10px;
+  background-position: -1137px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.cv {
+  height: 12px;
+  background-position: -1159px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.cw {
+  height: 14px;
+  background-position: -1181px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.cx {
+  height: 10px;
+  background-position: -1203px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.cy {
+  height: 13px;
+  background-position: -1225px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.cz {
+  height: 14px;
+  background-position: -1247px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.de {
+  height: 12px;
+  background-position: -1269px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.dg {
+  height: 10px;
+  background-position: -1291px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.dj {
+  height: 14px;
+  background-position: -1313px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.dk {
+  height: 15px;
+  background-position: -1335px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.dm {
+  height: 10px;
+  background-position: -1357px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.do {
+  height: 13px;
+  background-position: -1379px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.dz {
+  height: 14px;
+  background-position: -1401px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ea {
+  height: 14px;
+  background-position: -1423px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ec {
+  height: 14px;
+  background-position: -1445px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ee {
+  height: 13px;
+  background-position: -1467px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.eg {
+  height: 14px;
+  background-position: -1489px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.eh {
+  height: 10px;
+  background-position: -1511px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.er {
+  height: 10px;
+  background-position: -1533px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.es {
+  height: 14px;
+  background-position: -1555px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.et {
+  height: 10px;
+  background-position: -1577px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.eu {
+  height: 14px;
+  background-position: -1599px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.fi {
+  height: 12px;
+  background-position: -1621px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.fj {
+  height: 10px;
+  background-position: -1643px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.fk {
+  height: 10px;
+  background-position: -1665px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.fm {
+  height: 11px;
+  background-position: -1687px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.fo {
+  height: 15px;
+  background-position: -1709px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.fr {
+  height: 14px;
+  background-position: -1731px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ga {
+  height: 15px;
+  background-position: -1753px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gb {
+  height: 10px;
+  background-position: -1775px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gd {
+  height: 12px;
+  background-position: -1797px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ge {
+  height: 14px;
+  background-position: -1819px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gf {
+  height: 14px;
+  background-position: -1841px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gg {
+  height: 14px;
+  background-position: -1863px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gh {
+  height: 14px;
+  background-position: -1885px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gi {
+  height: 10px;
+  background-position: -1907px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gl {
+  height: 14px;
+  background-position: -1929px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gm {
+  height: 14px;
+  background-position: -1951px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gn {
+  height: 14px;
+  background-position: -1973px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gp {
+  height: 14px;
+  background-position: -1995px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gq {
+  height: 14px;
+  background-position: -2017px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gr {
+  height: 14px;
+  background-position: -2039px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gs {
+  height: 10px;
+  background-position: -2061px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gt {
+  height: 13px;
+  background-position: -2083px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gu {
+  height: 11px;
+  background-position: -2105px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gw {
+  height: 10px;
+  background-position: -2127px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.gy {
+  height: 12px;
+  background-position: -2149px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.hk {
+  height: 14px;
+  background-position: -2171px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.hm {
+  height: 10px;
+  background-position: -2193px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.hn {
+  height: 10px;
+  background-position: -2215px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.hr {
+  height: 10px;
+  background-position: -2237px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ht {
+  height: 12px;
+  background-position: -2259px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.hu {
+  height: 10px;
+  background-position: -2281px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ic {
+  height: 14px;
+  background-position: -2303px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.id {
+  height: 14px;
+  background-position: -2325px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ie {
+  height: 10px;
+  background-position: -2347px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.il {
+  height: 15px;
+  background-position: -2369px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.im {
+  height: 10px;
+  background-position: -2391px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.in {
+  height: 14px;
+  background-position: -2413px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.io {
+  height: 10px;
+  background-position: -2435px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.iq {
+  height: 14px;
+  background-position: -2457px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ir {
+  height: 12px;
+  background-position: -2479px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.is {
+  height: 15px;
+  background-position: -2501px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.it {
+  height: 14px;
+  background-position: -2523px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.je {
+  height: 12px;
+  background-position: -2545px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.jm {
+  height: 10px;
+  background-position: -2567px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.jo {
+  height: 10px;
+  background-position: -2589px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.jp {
+  height: 14px;
+  background-position: -2611px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ke {
+  height: 14px;
+  background-position: -2633px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.kg {
+  height: 12px;
+  background-position: -2655px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.kh {
+  height: 13px;
+  background-position: -2677px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ki {
+  height: 10px;
+  background-position: -2699px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.km {
+  height: 12px;
+  background-position: -2721px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.kn {
+  height: 14px;
+  background-position: -2743px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.kp {
+  height: 10px;
+  background-position: -2765px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.kr {
+  height: 14px;
+  background-position: -2787px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.kw {
+  height: 10px;
+  background-position: -2809px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ky {
+  height: 10px;
+  background-position: -2831px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.kz {
+  height: 10px;
+  background-position: -2853px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.la {
+  height: 14px;
+  background-position: -2875px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.lb {
+  height: 14px;
+  background-position: -2897px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.lc {
+  height: 10px;
+  background-position: -2919px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.li {
+  height: 12px;
+  background-position: -2941px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.lk {
+  height: 10px;
+  background-position: -2963px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.lr {
+  height: 11px;
+  background-position: -2985px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ls {
+  height: 14px;
+  background-position: -3007px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.lt {
+  height: 12px;
+  background-position: -3029px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.lu {
+  height: 12px;
+  background-position: -3051px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.lv {
+  height: 10px;
+  background-position: -3073px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ly {
+  height: 10px;
+  background-position: -3095px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ma {
+  height: 14px;
+  background-position: -3117px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mc {
+  height: 15px;
+  background-position: -3139px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.md {
+  height: 10px;
+  background-position: -3160px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.me {
+  height: 10px;
+  background-position: -3182px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mf {
+  height: 14px;
+  background-position: -3204px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mg {
+  height: 14px;
+  background-position: -3226px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mh {
+  height: 11px;
+  background-position: -3248px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mk {
+  height: 10px;
+  background-position: -3270px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ml {
+  height: 14px;
+  background-position: -3292px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mm {
+  height: 14px;
+  background-position: -3314px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mn {
+  height: 10px;
+  background-position: -3336px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mo {
+  height: 14px;
+  background-position: -3358px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mp {
+  height: 10px;
+  background-position: -3380px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mq {
+  height: 14px;
+  background-position: -3402px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mr {
+  height: 14px;
+  background-position: -3424px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ms {
+  height: 10px;
+  background-position: -3446px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mt {
+  height: 14px;
+  background-position: -3468px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mu {
+  height: 14px;
+  background-position: -3490px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mv {
+  height: 14px;
+  background-position: -3512px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mw {
+  height: 14px;
+  background-position: -3534px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mx {
+  height: 12px;
+  background-position: -3556px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.my {
+  height: 10px;
+  background-position: -3578px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.mz {
+  height: 14px;
+  background-position: -3600px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.na {
+  height: 14px;
+  background-position: -3622px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.nc {
+  height: 10px;
+  background-position: -3644px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ne {
+  height: 15px;
+  background-position: -3666px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.nf {
+  height: 10px;
+  background-position: -3686px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ng {
+  height: 10px;
+  background-position: -3708px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ni {
+  height: 12px;
+  background-position: -3730px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.nl {
+  height: 14px;
+  background-position: -3752px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.no {
+  height: 15px;
+  background-position: -3774px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.np {
+  height: 15px;
+  background-position: -3796px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.nr {
+  height: 10px;
+  background-position: -3811px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.nu {
+  height: 10px;
+  background-position: -3833px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.nz {
+  height: 10px;
+  background-position: -3855px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.om {
+  height: 10px;
+  background-position: -3877px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.pa {
+  height: 14px;
+  background-position: -3899px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.pe {
+  height: 14px;
+  background-position: -3921px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.pf {
+  height: 14px;
+  background-position: -3943px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.pg {
+  height: 15px;
+  background-position: -3965px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ph {
+  height: 10px;
+  background-position: -3987px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.pk {
+  height: 14px;
+  background-position: -4009px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.pl {
+  height: 13px;
+  background-position: -4031px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.pm {
+  height: 14px;
+  background-position: -4053px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.pn {
+  height: 10px;
+  background-position: -4075px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.pr {
+  height: 14px;
+  background-position: -4097px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ps {
+  height: 10px;
+  background-position: -4119px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.pt {
+  height: 14px;
+  background-position: -4141px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.pw {
+  height: 13px;
+  background-position: -4163px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.py {
+  height: 11px;
+  background-position: -4185px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.qa {
+  height: 8px;
+  background-position: -4207px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.re {
+  height: 14px;
+  background-position: -4229px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ro {
+  height: 14px;
+  background-position: -4251px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.rs {
+  height: 14px;
+  background-position: -4273px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ru {
+  height: 14px;
+  background-position: -4295px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.rw {
+  height: 14px;
+  background-position: -4317px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.sa {
+  height: 14px;
+  background-position: -4339px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.sb {
+  height: 10px;
+  background-position: -4361px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.sc {
+  height: 10px;
+  background-position: -4383px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.sd {
+  height: 10px;
+  background-position: -4405px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.se {
+  height: 13px;
+  background-position: -4427px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.sg {
+  height: 14px;
+  background-position: -4449px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.sh {
+  height: 10px;
+  background-position: -4471px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.si {
+  height: 10px;
+  background-position: -4493px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.sj {
+  height: 15px;
+  background-position: -4515px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.sk {
+  height: 14px;
+  background-position: -4537px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.sl {
+  height: 14px;
+  background-position: -4559px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.sm {
+  height: 15px;
+  background-position: -4581px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.sn {
+  height: 14px;
+  background-position: -4603px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.so {
+  height: 14px;
+  background-position: -4625px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.sr {
+  height: 14px;
+  background-position: -4647px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ss {
+  height: 10px;
+  background-position: -4669px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.st {
+  height: 10px;
+  background-position: -4691px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.sv {
+  height: 12px;
+  background-position: -4713px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.sx {
+  height: 14px;
+  background-position: -4735px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.sy {
+  height: 14px;
+  background-position: -4757px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.sz {
+  height: 14px;
+  background-position: -4779px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ta {
+  height: 10px;
+  background-position: -4801px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.tc {
+  height: 10px;
+  background-position: -4823px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.td {
+  height: 14px;
+  background-position: -4845px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.tf {
+  height: 14px;
+  background-position: -4867px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.tg {
+  height: 13px;
+  background-position: -4889px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.th {
+  height: 14px;
+  background-position: -4911px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.tj {
+  height: 10px;
+  background-position: -4933px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.tk {
+  height: 10px;
+  background-position: -4955px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.tl {
+  height: 10px;
+  background-position: -4977px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.tm {
+  height: 14px;
+  background-position: -4999px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.tn {
+  height: 14px;
+  background-position: -5021px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.to {
+  height: 10px;
+  background-position: -5043px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.tr {
+  height: 14px;
+  background-position: -5065px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.tt {
+  height: 12px;
+  background-position: -5087px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.tv {
+  height: 10px;
+  background-position: -5109px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.tw {
+  height: 14px;
+  background-position: -5131px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.tz {
+  height: 14px;
+  background-position: -5153px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ua {
+  height: 14px;
+  background-position: -5175px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ug {
+  height: 14px;
+  background-position: -5197px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.um {
+  height: 11px;
+  background-position: -5219px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.us {
+  height: 11px;
+  background-position: -5241px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.uy {
+  height: 14px;
+  background-position: -5263px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.uz {
+  height: 10px;
+  background-position: -5285px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.va {
+  height: 15px;
+  background-position: -5307px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.vc {
+  height: 14px;
+  background-position: -5324px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ve {
+  height: 14px;
+  background-position: -5346px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.vg {
+  height: 10px;
+  background-position: -5368px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.vi {
+  height: 14px;
+  background-position: -5390px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.vn {
+  height: 14px;
+  background-position: -5412px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.vu {
+  height: 12px;
+  background-position: -5434px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.wf {
+  height: 14px;
+  background-position: -5456px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ws {
+  height: 10px;
+  background-position: -5478px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.xk {
+  height: 15px;
+  background-position: -5500px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.ye {
+  height: 14px;
+  background-position: -5522px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.yt {
+  height: 14px;
+  background-position: -5544px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.za {
+  height: 14px;
+  background-position: -5566px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.zm {
+  height: 14px;
+  background-position: -5588px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag.zw {
+  height: 10px;
+  background-position: -5610px 0px;
+}
+.whmcs-twentyone-isolated .iti-flag {
+  width: 20px;
+  height: 15px;
+  box-shadow: 0px 0px 1px 0px #888;
+  background-image: url("../img/flags.png");
+  background-repeat: no-repeat;
+  background-color: #DBDBDB;
+  background-position: 20px 0;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .whmcs-twentyone-isolated .iti-flag {
+    background-image: url("../img/flags@2x.png");
+  }
+}
+.whmcs-twentyone-isolated .iti-flag.np {
+  background-color: transparent;
+}
+.whmcs-twentyone-isolated .intl-tel-input {
+  width: 100%;
+}
+.whmcs-twentyone-isolated .bootstrap-switch {
+  display: inline-block;
+  direction: ltr;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  line-height: 8px;
+  z-index: 0;
+  user-select: none;
+  vertical-align: middle;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-container {
+  display: inline-block;
+  top: 0;
+  border-radius: 0.25rem;
+  transform: translate3d(0, 0, 0);
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-label {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block !important;
+  height: 100%;
+  line-height: 1.25;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off {
+  text-align: center;
+  z-index: 1;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
+  color: #fff;
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:hover,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:hover {
+  color: #fff;
+  background-color: #025aa5;
+  border-color: #01549b;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary.focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary.focus {
+  box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary.disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary.disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:disabled {
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary:active,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary.active,
+.whmcs-twentyone-isolated .show > .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary.dropdown-toggle,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary:active,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary.active,
+.whmcs-twentyone-isolated .show > .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #025aa5;
+  background-image: none;
+  border-color: #01549b;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-secondary,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-secondary {
+  color: #292b2c;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-secondary:hover,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-secondary:hover {
+  color: #292b2c;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-secondary:focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-secondary.focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-secondary:focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-secondary.focus {
+  box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-secondary.disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-secondary:disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-secondary.disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-secondary:disabled {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-secondary:active,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-secondary.active,
+.whmcs-twentyone-isolated .show > .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-secondary.dropdown-toggle,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-secondary:active,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-secondary.active,
+.whmcs-twentyone-isolated .show > .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-secondary.dropdown-toggle {
+  color: #292b2c;
+  background-color: #e6e6e6;
+  background-image: none;
+  border-color: #adadad;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info:hover,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info:hover {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #2aabd2;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info:focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info.focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info:focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info.focus {
+  box-shadow: 0 0 0 2px rgba(91, 192, 222, 0.5);
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info.disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info:disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info.disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info:disabled {
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info:active,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info.active,
+.whmcs-twentyone-isolated .show > .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info.dropdown-toggle,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info:active,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info.active,
+.whmcs-twentyone-isolated .show > .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info.dropdown-toggle {
+  color: #fff;
+  background-color: #31b0d5;
+  background-image: none;
+  border-color: #2aabd2;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success:hover,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success:hover {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #419641;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success:focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success.focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success:focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success.focus {
+  box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.5);
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success.disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success:disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success.disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success:disabled {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success:active,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success.active,
+.whmcs-twentyone-isolated .show > .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success.dropdown-toggle,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success:active,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success.active,
+.whmcs-twentyone-isolated .show > .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success.dropdown-toggle {
+  color: #fff;
+  background-color: #449d44;
+  background-image: none;
+  border-color: #419641;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-warning {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning:hover,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-warning:hover {
+  color: #fff;
+  background-color: #ec971f;
+  border-color: #eb9316;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning:focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning.focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-warning:focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-warning.focus {
+  box-shadow: 0 0 0 2px rgba(240, 173, 78, 0.5);
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning.disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning:disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-warning.disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-warning:disabled {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning:active,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning.active,
+.whmcs-twentyone-isolated .show > .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning.dropdown-toggle,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-warning:active,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-warning.active,
+.whmcs-twentyone-isolated .show > .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-warning.dropdown-toggle {
+  color: #fff;
+  background-color: #ec971f;
+  background-image: none;
+  border-color: #eb9316;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger:hover,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-danger:hover {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #c12e2a;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger:focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger.focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-danger:focus,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-danger.focus {
+  box-shadow: 0 0 0 2px rgba(217, 83, 79, 0.5);
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger.disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger:disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-danger.disabled,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-danger:disabled {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger:active,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger.active,
+.whmcs-twentyone-isolated .show > .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger.dropdown-toggle,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-danger:active,
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-danger.active,
+.whmcs-twentyone-isolated .show > .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-danger.dropdown-toggle {
+  color: #fff;
+  background-color: #c9302c;
+  background-image: none;
+  border-color: #c12e2a;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-label {
+  text-align: center;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  z-index: 100;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-on {
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+}
+.whmcs-twentyone-isolated .bootstrap-switch .bootstrap-switch-handle-off {
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.whmcs-twentyone-isolated .bootstrap-switch input[type='radio'],
+.whmcs-twentyone-isolated .bootstrap-switch input[type='checkbox'] {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+}
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-mini {
+  min-width: 71px;
+}
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-on,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-off,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-label {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.2rem;
+}
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-small {
+  min-width: 79px;
+}
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-small .bootstrap-switch-handle-on,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-small .bootstrap-switch-handle-off,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-small .bootstrap-switch-label {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.2rem;
+}
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-large {
+  min-width: 120px;
+}
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-large .bootstrap-switch-handle-on,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-large .bootstrap-switch-handle-off,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-large .bootstrap-switch-label {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  border-radius: 0.3rem;
+}
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-disabled,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-readonly,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-indeterminate {
+  cursor: default !important;
+}
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-disabled .bootstrap-switch-handle-on,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-disabled .bootstrap-switch-handle-off,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-disabled .bootstrap-switch-label,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-readonly .bootstrap-switch-handle-on,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-readonly .bootstrap-switch-handle-off,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-readonly .bootstrap-switch-label,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-indeterminate .bootstrap-switch-handle-on,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-indeterminate .bootstrap-switch-handle-off,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-indeterminate .bootstrap-switch-label {
+  opacity: 0.5;
+  cursor: default !important;
+}
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-animate .bootstrap-switch-container {
+  transition: margin-left 0.5s;
+}
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-inverse .bootstrap-switch-handle-on {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-inverse .bootstrap-switch-handle-off {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+}
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-focused {
+  box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
+}
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-on .bootstrap-switch-label,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-inverse.bootstrap-switch-off .bootstrap-switch-label {
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-off .bootstrap-switch-label,
+.whmcs-twentyone-isolated .bootstrap-switch.bootstrap-switch-inverse.bootstrap-switch-on .bootstrap-switch-label {
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+}
+.whmcs-twentyone-isolated .md-editor {
+  display: block;
+  border: 1px solid #ddd;
+}
+.whmcs-twentyone-isolated .md-editor .md-footer,
+.whmcs-twentyone-isolated .md-editor > .md-header {
+  display: block;
+  padding: 6px 4px;
+  background: #f5f5f5;
+}
+.whmcs-twentyone-isolated .md-editor > .md-header {
+  margin: 0;
+}
+.whmcs-twentyone-isolated .md-editor > .md-preview {
+  background: #fff;
+  border-top: 1px dashed #ddd;
+  border-bottom: 1px dashed #ddd;
+  min-height: 10px;
+  overflow: auto;
+}
+.whmcs-twentyone-isolated .md-editor > textarea {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 14px;
+  outline: 0;
+  margin: 0;
+  display: block;
+  padding: 0;
+  width: 100%;
+  border: 0;
+  border-top: 1px dashed #ddd;
+  border-bottom: 1px dashed #ddd;
+  border-radius: 0;
+  box-shadow: none;
+  background: #eee;
+}
+.whmcs-twentyone-isolated .md-editor > textarea:focus {
+  box-shadow: none;
+  background: #fff;
+}
+.whmcs-twentyone-isolated .md-editor.active {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.whmcs-twentyone-isolated .md-editor .md-controls {
+  float: right;
+  padding: 3px;
+}
+.whmcs-twentyone-isolated .md-editor .md-controls .md-control {
+  right: 5px;
+  color: #bebebe;
+  padding: 3px 3px 3px 10px;
+}
+.whmcs-twentyone-isolated .md-editor .md-controls .md-control:hover {
+  color: #333;
+}
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  padding: 60px 30px 15px;
+  background: #fff !important;
+  border: 0 !important;
+}
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .md-footer {
+  display: none;
+}
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .md-input,
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .md-preview {
+  margin: 0 auto!important;
+  height: 100%!important;
+  font-size: 20px!important;
+  padding: 20px!important;
+  color: #999;
+  line-height: 1.6em !important;
+  resize: none!important;
+  box-shadow: none!important;
+  background: #fff !important;
+  border: 0 !important;
+}
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .md-preview {
+  color: #333;
+  overflow: auto;
+}
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .md-input:focus,
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .md-input:hover {
+  color: #333;
+  background: #fff !important;
+}
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .md-header {
+  background: 0 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 20px;
+}
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .btn-group {
+  float: none;
+}
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .btn {
+  border: 0;
+  background: 0 0;
+  color: #b3b3b3;
+}
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .btn.active,
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .btn:active,
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .btn:focus,
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .btn:hover {
+  box-shadow: none;
+  color: #333;
+}
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .md-fullscreen-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+  z-index: 1002;
+  display: block;
+}
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .md-fullscreen-controls a {
+  color: #b3b3b3;
+  clear: right;
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .md-fullscreen-controls a:hover {
+  color: #333;
+  text-decoration: none;
+}
+.whmcs-twentyone-isolated .md-editor.md-fullscreen-mode .md-editor {
+  height: 100%!important;
+  position: relative;
+}
+.whmcs-twentyone-isolated .md-editor .md-fullscreen-controls {
+  display: none;
+}
+.whmcs-twentyone-isolated .md-nooverflow {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+.whmcs-twentyone-isolated table.dataTable {
+  clear: both;
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+  max-width: none !important;
+  border-collapse: separate !important;
+  border-spacing: 0;
+}
+.whmcs-twentyone-isolated table.dataTable td,
+.whmcs-twentyone-isolated table.dataTable th {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.whmcs-twentyone-isolated table.dataTable td.dataTables_empty,
+.whmcs-twentyone-isolated table.dataTable th.dataTables_empty {
+  text-align: center;
+}
+.whmcs-twentyone-isolated table.dataTable.nowrap th,
+.whmcs-twentyone-isolated table.dataTable.nowrap td {
+  white-space: nowrap;
+}
+.whmcs-twentyone-isolated div.dataTables_wrapper div.dataTables_length label {
+  font-weight: normal;
+  text-align: left;
+  white-space: nowrap;
+}
+.whmcs-twentyone-isolated div.dataTables_wrapper div.dataTables_length select {
+  width: auto;
+  display: inline-block;
+}
+.whmcs-twentyone-isolated div.dataTables_wrapper div.dataTables_filter {
+  text-align: right;
+}
+.whmcs-twentyone-isolated div.dataTables_wrapper div.dataTables_filter label {
+  font-weight: normal;
+  white-space: nowrap;
+  text-align: left;
+}
+.whmcs-twentyone-isolated div.dataTables_wrapper div.dataTables_filter input {
+  margin-left: 0.5em;
+  display: inline-block;
+  width: auto;
+}
+.whmcs-twentyone-isolated div.dataTables_wrapper div.dataTables_info {
+  padding-top: 0.85em;
+}
+.whmcs-twentyone-isolated div.dataTables_wrapper div.dataTables_paginate {
+  margin: 0;
+  white-space: nowrap;
+  text-align: right;
+}
+.whmcs-twentyone-isolated div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+  margin: 2px 0;
+  white-space: nowrap;
+  justify-content: flex-end;
+}
+.whmcs-twentyone-isolated div.dataTables_wrapper div.dataTables_processing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+  margin-top: -26px;
+  text-align: center;
+  padding: 1em 0;
+}
+.whmcs-twentyone-isolated table.dataTable > thead > tr > th:active,
+.whmcs-twentyone-isolated table.dataTable > thead > tr > td:active {
+  outline: none;
+}
+.whmcs-twentyone-isolated table.dataTable > thead > tr > th:not(.sorting_disabled),
+.whmcs-twentyone-isolated table.dataTable > thead > tr > td:not(.sorting_disabled) {
+  padding-right: 30px;
+}
+.whmcs-twentyone-isolated table.dataTable > thead .sorting,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_asc,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_desc,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_asc_disabled,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_desc_disabled {
+  cursor: pointer;
+  position: relative;
+}
+.whmcs-twentyone-isolated table.dataTable > thead .sorting:before,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting:after,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_asc:before,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_asc:after,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_desc:before,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_desc:after,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_asc_disabled:before,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_asc_disabled:after,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_desc_disabled:before,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_desc_disabled:after {
+  position: absolute;
+  bottom: 0.9em;
+  display: block;
+  opacity: 0.3;
+}
+.whmcs-twentyone-isolated table.dataTable > thead .sorting:before,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_asc:before,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_desc:before,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_asc_disabled:before,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_desc_disabled:before {
+  right: 1em;
+  content: "↑";
+}
+.whmcs-twentyone-isolated table.dataTable > thead .sorting:after,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_asc:after,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_desc:after,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_asc_disabled:after,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_desc_disabled:after {
+  right: 0.5em;
+  content: "↓";
+}
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_asc:before,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_desc:after {
+  opacity: 1;
+}
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_asc_disabled:before,
+.whmcs-twentyone-isolated table.dataTable > thead .sorting_desc_disabled:after {
+  opacity: 0;
+}
+.whmcs-twentyone-isolated div.dataTables_scrollHead table.dataTable {
+  margin-bottom: 0 !important;
+}
+.whmcs-twentyone-isolated div.dataTables_scrollBody table {
+  border-top: none;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.whmcs-twentyone-isolated div.dataTables_scrollBody table thead .sorting:before,
+.whmcs-twentyone-isolated div.dataTables_scrollBody table thead .sorting_asc:before,
+.whmcs-twentyone-isolated div.dataTables_scrollBody table thead .sorting_desc:before,
+.whmcs-twentyone-isolated div.dataTables_scrollBody table thead .sorting:after,
+.whmcs-twentyone-isolated div.dataTables_scrollBody table thead .sorting_asc:after,
+.whmcs-twentyone-isolated div.dataTables_scrollBody table thead .sorting_desc:after {
+  display: none;
+}
+.whmcs-twentyone-isolated div.dataTables_scrollBody table tbody tr:first-child th,
+.whmcs-twentyone-isolated div.dataTables_scrollBody table tbody tr:first-child td {
+  border-top: none;
+}
+.whmcs-twentyone-isolated div.dataTables_scrollFoot > .dataTables_scrollFootInner {
+  box-sizing: content-box;
+}
+.whmcs-twentyone-isolated div.dataTables_scrollFoot > .dataTables_scrollFootInner > table {
+  margin-top: 0 !important;
+  border-top: none;
+}
+@media screen and (max-width: 767px) {
+  .whmcs-twentyone-isolated div.dataTables_wrapper div.dataTables_length,
+  .whmcs-twentyone-isolated div.dataTables_wrapper div.dataTables_filter,
+  .whmcs-twentyone-isolated div.dataTables_wrapper div.dataTables_info,
+  .whmcs-twentyone-isolated div.dataTables_wrapper div.dataTables_paginate {
+    text-align: center;
+  }
+  .whmcs-twentyone-isolated div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    justify-content: center !important;
+  }
+}
+.whmcs-twentyone-isolated table.dataTable.table-sm > thead > tr > th:not(.sorting_disabled) {
+  padding-right: 20px;
+}
+.whmcs-twentyone-isolated table.dataTable.table-sm .sorting:before,
+.whmcs-twentyone-isolated table.dataTable.table-sm .sorting_asc:before,
+.whmcs-twentyone-isolated table.dataTable.table-sm .sorting_desc:before {
+  top: 5px;
+  right: 0.85em;
+}
+.whmcs-twentyone-isolated table.dataTable.table-sm .sorting:after,
+.whmcs-twentyone-isolated table.dataTable.table-sm .sorting_asc:after,
+.whmcs-twentyone-isolated table.dataTable.table-sm .sorting_desc:after {
+  top: 5px;
+}
+.whmcs-twentyone-isolated table.table-bordered.dataTable {
+  border-right-width: 0;
+}
+.whmcs-twentyone-isolated table.table-bordered.dataTable th,
+.whmcs-twentyone-isolated table.table-bordered.dataTable td {
+  border-left-width: 0;
+}
+.whmcs-twentyone-isolated table.table-bordered.dataTable th:last-child,
+.whmcs-twentyone-isolated table.table-bordered.dataTable th:last-child,
+.whmcs-twentyone-isolated table.table-bordered.dataTable td:last-child,
+.whmcs-twentyone-isolated table.table-bordered.dataTable td:last-child {
+  border-right-width: 1px;
+}
+.whmcs-twentyone-isolated table.table-bordered.dataTable tbody th,
+.whmcs-twentyone-isolated table.table-bordered.dataTable tbody td {
+  border-bottom-width: 0;
+}
+.whmcs-twentyone-isolated div.dataTables_scrollHead table.table-bordered {
+  border-bottom-width: 0;
+}
+.whmcs-twentyone-isolated div.table-responsive > div.dataTables_wrapper > div.row {
+  margin: 0;
+}
+.whmcs-twentyone-isolated div.table-responsive > div.dataTables_wrapper > div.row > div[class^=col-]:first-child {
+  padding-left: 0;
+}
+.whmcs-twentyone-isolated div.table-responsive > div.dataTables_wrapper > div.row > div[class^=col-]:last-child {
+  padding-right: 0;
+}
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed > tbody > tr > td.child,
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed > tbody > tr > th.child,
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed > tbody > tr > td.dataTables_empty {
+  cursor: default !important;
+}
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed > tbody > tr > td.child:before,
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed > tbody > tr > th.child:before,
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed > tbody > tr > td.dataTables_empty:before {
+  display: none !important;
+}
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control,
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before,
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
+  top: 50%;
+  left: 5px;
+  height: 1em;
+  width: 1em;
+  margin-top: -9px;
+  display: block;
+  position: absolute;
+  color: white;
+  border: 0.15em solid white;
+  border-radius: 1em;
+  box-shadow: 0 0 0.2em #444;
+  box-sizing: content-box;
+  text-align: center;
+  text-indent: 0 !important;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1em;
+  content: "+";
+  background-color: #0275d8;
+}
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td.dtr-control:before,
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th.dtr-control:before {
+  content: "-";
+  background-color: #d33333;
+}
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed.compact > tbody > tr > td.dtr-control,
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed.compact > tbody > tr > th.dtr-control {
+  padding-left: 27px;
+}
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed.compact > tbody > tr > td.dtr-control:before,
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed.compact > tbody > tr > th.dtr-control:before {
+  left: 4px;
+  height: 14px;
+  width: 14px;
+  border-radius: 14px;
+  line-height: 14px;
+  text-indent: 3px;
+}
+.whmcs-twentyone-isolated table.dataTable.dtr-column > tbody > tr > td.dtr-control,
+.whmcs-twentyone-isolated table.dataTable.dtr-column > tbody > tr > th.dtr-control,
+.whmcs-twentyone-isolated table.dataTable.dtr-column > tbody > tr > td.control,
+.whmcs-twentyone-isolated table.dataTable.dtr-column > tbody > tr > th.control {
+  position: relative;
+  cursor: pointer;
+}
+.whmcs-twentyone-isolated table.dataTable.dtr-column > tbody > tr > td.dtr-control:before,
+.whmcs-twentyone-isolated table.dataTable.dtr-column > tbody > tr > th.dtr-control:before,
+.whmcs-twentyone-isolated table.dataTable.dtr-column > tbody > tr > td.control:before,
+.whmcs-twentyone-isolated table.dataTable.dtr-column > tbody > tr > th.control:before {
+  top: 50%;
+  left: 50%;
+  height: 0.8em;
+  width: 0.8em;
+  margin-top: -0.5em;
+  margin-left: -0.5em;
+  display: block;
+  position: absolute;
+  color: white;
+  border: 0.15em solid white;
+  border-radius: 1em;
+  box-shadow: 0 0 0.2em #444;
+  box-sizing: content-box;
+  text-align: center;
+  text-indent: 0 !important;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1em;
+  content: "+";
+  background-color: #0275d8;
+}
+.whmcs-twentyone-isolated table.dataTable.dtr-column > tbody > tr.parent td.dtr-control:before,
+.whmcs-twentyone-isolated table.dataTable.dtr-column > tbody > tr.parent th.dtr-control:before,
+.whmcs-twentyone-isolated table.dataTable.dtr-column > tbody > tr.parent td.control:before,
+.whmcs-twentyone-isolated table.dataTable.dtr-column > tbody > tr.parent th.control:before {
+  content: "-";
+  background-color: #d33333;
+}
+.whmcs-twentyone-isolated table.dataTable > tbody > tr.child {
+  padding: 0.5em 1em;
+}
+.whmcs-twentyone-isolated table.dataTable > tbody > tr.child:hover {
+  background: transparent !important;
+}
+.whmcs-twentyone-isolated table.dataTable > tbody > tr.child ul.dtr-details {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.whmcs-twentyone-isolated table.dataTable > tbody > tr.child ul.dtr-details > li {
+  border-bottom: 1px solid #efefef;
+  padding: 0.5em 0;
+}
+.whmcs-twentyone-isolated table.dataTable > tbody > tr.child ul.dtr-details > li:first-child {
+  padding-top: 0;
+}
+.whmcs-twentyone-isolated table.dataTable > tbody > tr.child ul.dtr-details > li:last-child {
+  border-bottom: none;
+}
+.whmcs-twentyone-isolated table.dataTable > tbody > tr.child span.dtr-title {
+  display: inline-block;
+  min-width: 75px;
+  font-weight: bold;
+}
+.whmcs-twentyone-isolated div.dtr-modal {
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  padding: 10em 1em;
+}
+.whmcs-twentyone-isolated div.dtr-modal div.dtr-modal-display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  z-index: 102;
+  overflow: auto;
+  background-color: #f5f5f7;
+  border: 1px solid black;
+  border-radius: 0.5em;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+.whmcs-twentyone-isolated div.dtr-modal div.dtr-modal-content {
+  position: relative;
+  padding: 1em;
+}
+.whmcs-twentyone-isolated div.dtr-modal div.dtr-modal-close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #eaeaea;
+  background-color: #f9f9f9;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 12;
+}
+.whmcs-twentyone-isolated div.dtr-modal div.dtr-modal-close:hover {
+  background-color: #eaeaea;
+}
+.whmcs-twentyone-isolated div.dtr-modal div.dtr-modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  background: rgba(0, 0, 0, 0.6);
+}
+@media screen and (max-width: 767px) {
+  .whmcs-twentyone-isolated div.dtr-modal div.dtr-modal-display {
+    width: 95%;
+  }
+}
+.whmcs-twentyone-isolated div.dtr-bs-modal table.table tr:first-child td {
+  border-top: none;
+}
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed.table-sm > tbody > tr > td:first-child:before,
+.whmcs-twentyone-isolated table.dataTable.dtr-inline.collapsed.table-sm > tbody > tr > th:first-child:before {
+  top: 5px;
+}
+.whmcs-twentyone-isolated .multiselect-container {
+  position: absolute;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.whmcs-twentyone-isolated .multiselect-container .input-group {
+  margin: 5px;
+}
+.whmcs-twentyone-isolated .multiselect-container > li {
+  padding: 0;
+}
+.whmcs-twentyone-isolated .multiselect-container > li > a.multiselect-all label {
+  font-weight: 700;
+}
+.whmcs-twentyone-isolated .multiselect-container > li.multiselect-group label {
+  margin: 0;
+  padding: 3px 20px 3px 20px;
+  height: 100%;
+  font-weight: 700;
+}
+.whmcs-twentyone-isolated .multiselect-container > li.multiselect-group-clickable label {
+  cursor: pointer;
+}
+.whmcs-twentyone-isolated .multiselect-container > li > a {
+  padding: 0;
+}
+.whmcs-twentyone-isolated .multiselect-container > li > a > label {
+  margin: 0;
+  height: 100%;
+  cursor: pointer;
+  font-weight: 400;
+  padding: 3px 20px 3px 40px;
+}
+.whmcs-twentyone-isolated .multiselect-container > li > a > label.radio,
+.whmcs-twentyone-isolated .multiselect-container > li > a > label.checkbox {
+  margin: 0;
+}
+.whmcs-twentyone-isolated .multiselect-container > li > a > label > input[type=checkbox] {
+  margin-bottom: 5px;
+}
+.whmcs-twentyone-isolated .btn-group > .btn-group:nth-child(2) > .multiselect.btn {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.whmcs-twentyone-isolated .form-inline .multiselect-container label.checkbox,
+.whmcs-twentyone-isolated .form-inline .multiselect-container label.radio {
+  padding: 3px 20px 3px 40px;
+}
+.whmcs-twentyone-isolated .form-inline .multiselect-container li a label.checkbox input[type=checkbox],
+.whmcs-twentyone-isolated .form-inline .multiselect-container li a label.radio input[type=radio] {
+  margin-left: -20px;
+  margin-right: 0;
+}
+.whmcs-twentyone-isolated .icheckbox_square-blue,
+.whmcs-twentyone-isolated .iradio_square-blue {
+  display: inline-block;
+  *display: inline;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  width: 22px;
+  height: 22px;
+  background: url(blue.png) no-repeat;
+  border: none;
+  cursor: pointer;
+}
+.whmcs-twentyone-isolated .icheckbox_square-blue {
+  background-position: 0 0;
+}
+.whmcs-twentyone-isolated .icheckbox_square-blue.hover {
+  background-position: -24px 0;
+}
+.whmcs-twentyone-isolated .icheckbox_square-blue.checked {
+  background-position: -48px 0;
+}
+.whmcs-twentyone-isolated .icheckbox_square-blue.disabled {
+  background-position: -72px 0;
+  cursor: default;
+}
+.whmcs-twentyone-isolated .icheckbox_square-blue.checked.disabled {
+  background-position: -96px 0;
+}
+.whmcs-twentyone-isolated .iradio_square-blue {
+  background-position: -120px 0;
+}
+.whmcs-twentyone-isolated .iradio_square-blue.hover {
+  background-position: -144px 0;
+}
+.whmcs-twentyone-isolated .iradio_square-blue.checked {
+  background-position: -168px 0;
+}
+.whmcs-twentyone-isolated .iradio_square-blue.disabled {
+  background-position: -192px 0;
+  cursor: default;
+}
+.whmcs-twentyone-isolated .iradio_square-blue.checked.disabled {
+  background-position: -216px 0;
+}
+@media (-o-min-device-pixel-ratio: 1.25), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  .whmcs-twentyone-isolated .icheckbox_square-blue,
+  .whmcs-twentyone-isolated .iradio_square-blue {
+    background-image: url(blue@2x.png);
+    -webkit-background-size: 240px 24px;
+    background-size: 240px 24px;
+  }
+}

@@ -1,0 +1,114 @@
+.whmcs-six-isolated {
+  /**
+ * WHMCS Quote Style Sheet
+ *
+ * This sheet contains the styles used on custom quotes.
+ *
+ * @project   WHMCS
+ * @cssdoc    version 1.0-pre
+ * @package   WHMCS
+ * @author    WHMCS Limited <development@whmcs.com>
+ * @copyright Copyright (c) WHMCS Limited 2005-2015
+ * @license   http://www.whmcs.com/license/
+ * @link      http://www.whmcs.com/
+*/
+  /**
+ * -----------------
+ * @section Quotes
+ * -----------------
+ */
+}
+.whmcs-six-isolated,
+.whmcs-six-isolated td,
+.whmcs-six-isolated input,
+.whmcs-six-isolated select {
+  font-family: Tahoma;
+  font-size: 11px;
+  color: #000000;
+}
+.whmcs-six-isolated form {
+  margin: 0px;
+}
+.whmcs-six-isolated a {
+  color: #000000;
+}
+.whmcs-six-isolated #wrapper {
+  width: 600px;
+}
+.whmcs-six-isolated .invoice-top-tables {
+  width: 100%;
+  border-collapse: separate;
+}
+.whmcs-six-isolated .invoice-content {
+  background-color: #ffffff;
+  color: #000000;
+}
+.whmcs-six-isolated .unpaid {
+  font-size: 16px;
+  color: #cc0000;
+  font-weight: bold;
+}
+.whmcs-six-isolated .paid {
+  font-size: 16px;
+  color: #779500;
+  font-weight: bold;
+}
+.whmcs-six-isolated .refunded {
+  font-size: 16px;
+  color: #224488;
+  font-weight: bold;
+}
+.whmcs-six-isolated .cancelled {
+  font-size: 16px;
+  color: #cccccc;
+  font-weight: bold;
+}
+.whmcs-six-isolated .collections {
+  font-size: 16px;
+  color: #ffcc00;
+  font-weight: bold;
+}
+.whmcs-six-isolated #invoiceitemstable {
+  width: 100%;
+  background-color: #cccccc;
+  border-collapse: separate;
+}
+.whmcs-six-isolated td.invoice-items-heading {
+  background-color: #efefef;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+}
+.whmcs-six-isolated td.invoice-items-row {
+  background-color: #ffffff;
+  color: #000000;
+}
+.whmcs-six-isolated .creditbox {
+  border: 1px dashed #cc0000;
+  font-weight: bold;
+  background-color: #FBEEEB;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  color: #cc0000;
+  margin-left: auto;
+  margin-right: auto;
+}
+.whmcs-six-isolated .invoice-error {
+  color: #cc0000;
+}
+.whmcs-six-isolated .inline-display {
+  display: inline;
+}
+.whmcs-six-isolated .invoice-border {
+  border: 1px solid #cccccc;
+}
+.whmcs-six-isolated .bottom-zero {
+  border-bottom: 0px;
+}
+.whmcs-six-isolated .bottom-left-zero {
+  border-left: 0px;
+}
+.whmcs-six-isolated #quoteAccept {
+  display: none;
+}
